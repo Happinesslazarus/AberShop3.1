@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ScrollPane?>
+<AnchorPane fx:id="anchoPaneId" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.abershop.controllers.ViewDetailController">
+    <VBox spacing="10" AnchorPane.bottomAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+        <Label fx:id="viewRepairId" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="View Repair Details" />
+
+        <Pane fx:id="paneId" prefHeight="100.0" prefWidth="600.0" style="-fx-border-color: purple;">
+            <Label layoutX="20.0" layoutY="20.0" style="-fx-text-fill: purple;" text="Repair ID">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Label>
+            <TextField fx:id="repairIdField" layoutX="180.0" layoutY="17.0" prefHeight="37.0" prefWidth="300.0" />
+            <Button fx:id="searchButton" layoutX="500.0" layoutY="17.0" mnemonicParsing="false" onAction="#searchRepair" style="-fx-background-color: purple; -fx-text-fill: white;" text="Search">
+                <font>
+                    <Font size="18.0" />
+                </font>
+            </Button>
+            <Label fx:id="messageLabel" layoutX="180.0" layoutY="60.0" prefHeight="17.0" prefWidth="300.0" style="-fx-text-fill: red;" text="">
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </Pane>
+
+        <VBox spacing="10" prefHeight="600.0" prefWidth="600.0">
+            <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Repair Details" />
+
+            <GridPane fx:id="gridPane" hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="NEVER" minWidth="150" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="200" />
+                </columnConstraints>
+
+                <Label text="Repair Date :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label fx:id="repairDateLabel" GridPane.columnIndex="1" GridPane.rowIndex="0" wrapText="true" />
+
+                <Label text="Status :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="statusLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" wrapText="true" />
+
+                <Label text="Customer Name :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label fx:id="customerNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" wrapText="true" />
+
+                <Label text="Contact Number :" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label fx:id="contactNumberLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" wrapText="true" />
+
+                <Label text="Device Type :" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label fx:id="deviceTypeLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" wrapText="true" />
+
+                <Label text="Device Model :" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Label fx:id="deviceModelLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" wrapText="true" />
+
+                <Label text="Manufacturer :" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                <Label fx:id="manufacturerLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" wrapText="true" />
+
+                <Label text="Network :" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                <Label fx:id="networkLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" wrapText="true" />
+
+                <Label text="Has Cellular :" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                <Label fx:id="hasCellularLabel" GridPane.columnIndex="1" GridPane.rowIndex="8" wrapText="true" />
+
+                <Label text="OS Version :" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+                <Label fx:id="osVersionLabel" GridPane.columnIndex="1" GridPane.rowIndex="9" wrapText="true" />
+
+                <Label text="Screen Size :" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+                <Label fx:id="screenSizeLabel" GridPane.columnIndex="1" GridPane.rowIndex="10" wrapText="true" />
+
+                <Label text="Issue Description :" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+                <Label fx:id="issueDescriptionLabel" GridPane.columnIndex="1" GridPane.rowIndex="11" wrapText="true" />
+
+                <Label text="Price :" GridPane.columnIndex="0" GridPane.rowIndex="12" />
+                <Label fx:id="priceLabel" GridPane.columnIndex="1" GridPane.rowIndex="12" wrapText="true" />
+
+                <Label text="Repair Details :" GridPane.columnIndex="0" GridPane.rowIndex="13" />
+                <ScrollPane GridPane.columnIndex="1" GridPane.rowIndex="13" prefHeight="100.0" prefWidth="300.0">
+                    <Label fx:id="repairDetail" wrapText="true" />
+                </ScrollPane>
+            </GridPane>
+
+            <HBox alignment="CENTER" spacing="20">
+                <Label fx:id="deleted_lbl" text="" textFill="#f50707">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Button fx:id="deleteBtn" graphicTextGap="5.0" onAction="#deleteRepair" text="Delete Repair" />
+            </HBox>
+        </VBox>
+    </VBox>
+</AnchorPane>

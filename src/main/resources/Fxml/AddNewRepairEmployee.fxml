@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.abershop.controllers.manager.AddNewEmployeeController">
+    <VBox alignment="CENTER" fillWidth="true" spacing="10.0">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20" />
+        </padding>
+
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Add New Employee" />
+
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300" />
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+
+            <Label text="Full Name:" GridPane.rowIndex="0" />
+            <TextField fx:id="fullNameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="Gender:" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="genderComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+            <Label text="Date of Birth:" GridPane.rowIndex="2" />
+            <DatePicker fx:id="dateOfBirthPicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Email Address:" GridPane.rowIndex="3" />
+            <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Label text="Password:" GridPane.rowIndex="4" />
+            <TextField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+            <Label text="Phone Number:" GridPane.rowIndex="5" />
+            <TextField fx:id="phoneNumberField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+            <Label text="Role:" GridPane.rowIndex="6" />
+            <TextField fx:id="roleField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+            <Label text="Address:" GridPane.rowIndex="7" />
+            <TextArea fx:id="addressArea" prefHeight="79.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+
+            <Label text="Start Date:" GridPane.rowIndex="8" />
+            <DatePicker fx:id="startDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        </GridPane>
+
+        <HBox alignment="CENTER" spacing="10">
+            <Button onAction="#saveEmployee" text="Save Employee" />
+            <Button onAction="#currentEmployee" text="Current Employee" />
+            <Button onAction="#clear" text="Cancel" />
+        </HBox>
+    </VBox>
+</AnchorPane>

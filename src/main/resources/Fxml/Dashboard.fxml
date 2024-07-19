@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700" prefWidth="800" stylesheets="@../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.abershop.controllers.dashboard.DashboardController">
+
+   <Text layoutX="16.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OVERVIEW">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+
+   <!-- Dashboard HBox centered with adjusted spacing between AnchorPanes -->
+   <HBox alignment="CENTER" layoutX="7.0" layoutY="90.0" prefHeight="150.0" prefWidth="876.0" spacing="10" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="9.0">
+      <AnchorPane prefHeight="150.0" prefWidth="300.0" styleClass="blue-pane">
+         <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="4.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="5.0">
+            <Image url="@../Images/group.png" />
+         </ImageView>
+         <Label fx:id="currentRepairCount" layoutX="94.0" layoutY="36.0" prefHeight="71.0" prefWidth="77.0" text="+46" textFill="#3020c7" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="124.0" AnchorPane.topAnchor="36.0">
+            <font>
+               <Font name="System Bold" size="30.0" />
+            </font>
+         </Label>
+         <Label layoutX="65.0" layoutY="15.0" text="Current Repair" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="15.0">
+            <font>
+               <Font name="System Bold" size="15.0" />
+            </font>
+         </Label>
+         <Label fx:id="currentRepairPercentage" layoutX="43.0" layoutY="95.0" text="46% More Then Yesterday" textFill="#321da3">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+      </AnchorPane>
+      <AnchorPane prefHeight="127.0" prefWidth="285.0" styleClass="green-pane">
+         <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="5.0">
+            <Image url="@../Images/done.png" />
+         </ImageView>
+         <Label fx:id="completedRepairCount" layoutX="93.0" layoutY="42.0" prefHeight="51.0" prefWidth="77.0" text="+70" textFill="#0c5e40" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="114.0" AnchorPane.topAnchor="42.0">
+            <font>
+               <Font name="System Bold" size="31.0" />
+            </font>
+         </Label>
+         <Label layoutX="66.0" layoutY="25.0" prefHeight="20.0" prefWidth="145.0" text="Completed Repair" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="15.0">
+            <font>
+               <Font name="System Bold" size="15.0" />
+            </font>
+         </Label>
+         <Label fx:id="completedRepairPercentage" layoutX="42.0" layoutY="98.0" text="70% More Then Yesterday" textFill="#0a5b38">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+      </AnchorPane>
+      <AnchorPane prefHeight="150.0" prefWidth="300.0" styleClass="orange-pane">
+         <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="5.0">
+            <Image url="@../Images/repairing.png" />
+         </ImageView>
+         <Label layoutX="44.0" layoutY="4.0" prefHeight="21.0" prefWidth="116.0" text="Total Repair" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="15.0">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label fx:id="totalRepairCount" layoutX="93.0" layoutY="44.0" prefHeight="46.0" prefWidth="70.0" text="+" textFill="#c91009" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="44.0">
+            <font>
+               <Font name="System Bold" size="30.0" />
+            </font>
+         </Label>
+         <Label fx:id="totalRepairPecentage" layoutX="44.0" layoutY="97.0" text="60% More Then Yesterday" textAlignment="CENTER" textFill="#a40808">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+      </AnchorPane>
+   </HBox>
+
+   <!-- Search Filter HBox with reduced layoutY for spacing -->
+   <HBox layoutX="7.0" layoutY="250.0" prefHeight="40.0" prefWidth="885.0" spacing="10">
+      <TextField fx:id="searchField" prefWidth="200" promptText="Search name or Id..." />
+      <ComboBox fx:id="filterComboBox" promptText="Filter" />
+      <DatePicker fx:id="startDatePicker" prefWidth="150.0" promptText="Start Date" />
+      <DatePicker fx:id="endDatePicker" prefWidth="150.0" promptText="End Date" />
+   </HBox>
+
+   <HBox layoutX="6.0" layoutY="290.0" prefHeight="534.0" prefWidth="885.0">
+      <ScrollPane prefHeight="534.0" prefWidth="885.0">
+         <VBox prefHeight="533.0" prefWidth="876.0">
+            <HBox prefHeight="0.0" prefWidth="876.0" />
+            <TableView fx:id="repairTableView" prefHeight="502.0" prefWidth="876.0">
+               <columns>
+                  <TableColumn fx:id="repairIdColumn" editable="false" prefWidth="88.0" text="Repair ID" />
+                  <TableColumn fx:id="customerNameColumn" editable="false" prefWidth="109.0" text="Name" />
+                  <TableColumn fx:id="customerNumColumn" prefWidth="135.0" text="Contact Number" />
+                  <TableColumn fx:id="manufacturerColumn" editable="false" prefWidth="119.0" text="Model" />
+                  <TableColumn fx:id="priceColumn" editable="false" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="dateColumn" editable="false" prefWidth="101.0" text="Date" />
+                  <TableColumn fx:id="statusColumn" editable="false" prefWidth="99.0" text="Status" />
+                  <TableColumn fx:id="actionColumn" editable="false" prefWidth="149.0" sortable="false" text="Action" />
+               </columns>
+            </TableView>
+         </VBox>
+      </ScrollPane>
+   </HBox>
+
+   <Label fx:id="name_lbl" layoutX="14.0" layoutY="8.0" prefHeight="36.0" prefWidth="395.0" text="Good Day, Welcome to Aberscreen ">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Label>
+</AnchorPane>

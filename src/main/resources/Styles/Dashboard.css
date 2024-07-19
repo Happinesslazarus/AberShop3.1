@@ -1,0 +1,23 @@
+.blue-pane {
+    -fx-background-color: #1589b3;
+    -fx-border-color: transparent; /* Make border color transparent */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.orange-pane {
+    -fx-background-color: lightcoral;
+    -fx-border-color: transparent; /* Make border color transparent */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.green-pane {
+    -fx-background-color: #88e088;
+    -fx-border-color: transparent; /* Make border color transparent */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}

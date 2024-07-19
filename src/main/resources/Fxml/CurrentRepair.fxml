@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" stylesheets="@../Styles/CurrentRepair.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.abershop.controllers.CurrentRepairController">
+   <HBox layoutX="3.0" layoutY="139.0" prefHeight="533.0" prefWidth="906.0">
+      <ScrollPane fx:id="scrollPane" prefHeight="533.0" prefWidth="893.0">
+         <VBox prefHeight="533.0" prefWidth="876.0">
+            <HBox prefHeight="14.0" prefWidth="876.0" />
+            <TableView fx:id="repairTableView" prefHeight="494.0" prefWidth="876.0">
+               <columns>
+                  <TableColumn fx:id="repairIdColumn" prefWidth="77.0" text="Repair ID" />
+                  <TableColumn fx:id="customerNameColumn" prefWidth="129.0" text="Contact Name" />
+                  <TableColumn fx:id="deviceTypeColumn" prefWidth="114.0" text="Device Type" />
+                  <TableColumn fx:id="deviceModelColumn" prefWidth="104.0" text="Device Model" />
+                  <TableColumn fx:id="manufacturerColumn" prefWidth="117.0" text="Manfacturer" />
+                  <TableColumn fx:id="networkTypeColmun" prefWidth="104.0" text="Network type" />
+                  <TableColumn fx:id="screenSizeColumn" prefWidth="84.0" text="Screen size" />
+                  <TableColumn fx:id="isssueDescriColumn" prefWidth="141.0" text="Issue Description" />
+               </columns>
+            </TableView>
+         </VBox>
+      </ScrollPane>
+   </HBox>
+   <HBox layoutX="14.0" layoutY="81.0" prefHeight="40.0" prefWidth="885.0" spacing="10">
+      <TextField fx:id="searchField" prefWidth="200" promptText="Search name or Id..." />
+      <ComboBox fx:id="filterComboBox" promptText="Filter" />
+   </HBox>
+   <Label layoutX="17.0" layoutY="19.0" prefHeight="36.0" prefWidth="200.0" text="Current Repairs" textFill="#0b1bc9">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Label>
+</AnchorPane>

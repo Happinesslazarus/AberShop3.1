@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="807.0" prefWidth="275.0" styleClass="main_menu_container" stylesheets="@../Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.abershop.controllers.manager.RepairManagerController">
+   <AnchorPane prefHeight="747.0" prefWidth="255.0" styleClass="left_container">
+      <VBox layoutX="-1.0" layoutY="8.0" prefHeight="117.0" prefWidth="255.0" styleClass="title_container" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="8.0">
+         <ImageView fitHeight="74.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../Images/phonelogo.png" />
+         </ImageView>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" AberScreen">
+            <fill>
+               <LinearGradient>
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.9342105388641357" green="0.8390594720840454" blue="0.8390594720840454" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </fill></Text>
+      </VBox>
+      <VBox layoutY="124.0" prefHeight="587.0" prefWidth="255.0" styleClass="menu_container" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="124.0">
+         <Label prefWidth="73.0" text="General" />
+         <Button fx:id="dashboard_btn" layoutX="30.0" layoutY="20.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="0.0" text="Dashboard">
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Images/home.png" />
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="view_detail_btn" layoutX="30.0" layoutY="160.0" mnemonicParsing="false" text="ViewDetail">
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Images/details_14931813.png" />
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="current_repair_btn" mnemonicParsing="false" prefHeight="60.0" prefWidth="0.0" text="Current Repair">
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Images/repairing.png" />
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="add_new_employee_btn" layoutX="30.0" layoutY="164.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="194.0" text="Add Employee">
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Images/group.png" />
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="currentEmployee_btn" layoutX="30.0" layoutY="298.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="200.0" text="Employee">
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../Images/edit.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="add_new_repair_btn" mnemonicParsing="false" prefHeight="52.0" prefWidth="194.0" text="Add New Repair">
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Images/add_new_repair.png" />
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="edit_repair_btn" layoutX="30.0" layoutY="90.0" mnemonicParsing="false" text="Edit Repair">
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Images/edit_(1).png" />
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button fx:id="logout_btn" mnemonicParsing="false" prefHeight="52.0" prefWidth="151.0" styleClass="alt_menu_btn" text="Logout">
+            <graphic>
+               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../Images/logout_(1).png" />
+               </ImageView>
+            </graphic>
+         </Button>
+      </VBox>
+   </AnchorPane>
+</VBox>
